@@ -1,0 +1,6 @@
+name = Revision Comment Marker
+description = Helps collaborators grok how the node revision history connects with the comment thread.
+core = 7.x
+version = 7.x-1.0
+package = Content
+dependencies[] = comment

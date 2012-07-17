@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * Implements hook_preprocess_comment_wrapper().
+ */
+function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
+  static $revisions = NULL;
+
+  $node     = $variables['node'];
+  $comments = &$variables['content']['comments'];
+
+  if (is_null($revisions)) {
+    $result = db_query("SELECT vid, timestamp
+                          FROM {node_revision}
+                         WHERE nid = :nid
+                      ORDER BY vid ASC", array(':nid' => $node->nid));
+
+    $revisions = array();
+    $version = 1;
+    foreach ($result as $record) {
+      $revisions[$version] = $record->timestamp;
+      $version += 1;
+    }
+  }
+
+  $first         = TRUE;
+  $version       = count($revisions);
+  $revision      = array_shift($revisions);
+  $prev_revision = (object) array('timestamp' => PHP_INT_MAX);
+
+  dpm($revisions, '$revisions');
+
+  foreach (element_children($comments) as $key) {
+    if (!is_numeric($key)) {
+      continue;
+    }
+
+    $comment = &$comments[$key];
+
+    $t_current       = $comment['#comment']->created;
+    $t_revision      = $revision->timestamp;
+    $t_prev_revision = $prev_revision->timestamp;
+    $has_parent      = ($comment['#comment']->pid == 0);
+
+    $comparison1 = $t_current < $t_revision ? ' < ' : ' >= ';
+    $comparison2 = $t_current >= $t_prev_revision ? ' >= ' : ' < ';
+    dpm($t_current . $comparison1 . $t_revision . ' -- ' . $t_current . $comparison2 . $t_prev_revision, 'COMPARISON created:rev_timestamp && created:prev_rev_timestamp, ' . ($has_parent ? 'PARENT' : ''));
+    dpm(array($revision, $prev_revision));
+
+    if ($first || ($t_current < $t_prev_revision && $t_current >= $t_revision && !$has_parent)) {
+      $first = FALSE;
+
+      $comment['revision_comment_marker'] = array(
+        '#weight' => -100,
+        '#markup' => '<div id="revision-comment-marker-' . $version . '" class="revision-comment-marker">' .
+                       l(
+                         '<span class="version-label">' . t('Version') . '</span> ' .
+                         '<span class="version-number">' . $version . '</span> ',
+                         "node/$node->nid/revisions/$revision->vid",
+                         array('html' => TRUE)
+                        ) .
+                     '</div>'
+      );
+
+      $version -= 1;
+
+      $prev_revision = $revision;
+      $revision      = array_shift($revisions);
+    }
+  }
+}

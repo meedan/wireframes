@@ -1,0 +1,81 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+
+// Import variables and mixins to be used.
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_wireframes.scss";
+
+
+#navigation {
+  border-top: 2px solid $text_color;
+  // background: #feffa5;
+
+  ul#primary {
+    margin-top: 3px;
+
+    li {
+      list-style-type: none;
+      display: block;
+      float: left;
+      margin-right: 0.5em;
+
+      a {
+        font-size: 1.1em;
+        padding: 0.3em 1.0em;
+        background: $nav_color;
+        color: #fff;
+
+        &:hover {
+          background: darken($nav_color, 7%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  display: inline-block;
+  padding: 0;
+
+  .separator {
+    padding: 0 0.5em;
+  }
+}
+
+h1 {
+  display: inline-block;
+}
+
+.tabs {
+  clear: both;
+  overflow: hidden;
+}
+
+#comments {
+  border-top: 2px solid $text_color;
+  padding: 1em 10em 0 10em;
+
+  .indented {
+    margin-left: 15px;
+    border-left: 5px solid #bbdafd;
+    padding-left: 5px;
+  }
+
+  .comment {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 31px;
+    border-bottom: 1px solid $text_color;
+
+    div.links {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      // float: right;
+    }
+  }
+}
