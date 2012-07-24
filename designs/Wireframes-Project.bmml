@@ -1,0 +1,116 @@
+<mockup version="1.0" skin="sketch" measuredW="1254" measuredH="1016" mockupW="1200" mockupH="1000">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="16" w="1200" h="1000" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <text>Meedan%20Wireframes%20-%20Home%0Ahttp%3A//wf.meedan.net</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="104" y="211" w="1100" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="true" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="__group__" x="104" y="98" w="191" h="106" measuredW="191" measuredH="106" zOrder="1" locked="true" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::PieChart" x="0" y="0" w="106" h="106" measuredW="180" measuredH="180" zOrder="0" locked="false" isInGroup="5"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="121" y="23" w="-1" h="-1" measuredW="69" measuredH="26" zOrder="1" locked="false" isInGroup="5">
+          <controlProperties>
+            <size>18</size>
+            <text>Meedan</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="121" y="49" w="-1" h="-1" measuredW="70" measuredH="26" zOrder="2" locked="false" isInGroup="5">
+          <controlProperties>
+            <size>18</size>
+            <text>nadeeM</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="130" y="312" w="-1" h="-1" measuredW="186" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%5BHomepage%5D%20-%20Version%206</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Image" x="246" y="373" w="101" h="103" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Image" x="130" y="373" w="101" h="103" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Image" x="363" y="373" w="101" h="103" measuredW="77" measuredH="79" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Title" x="130" y="231" w="-1" h="-1" measuredW="255" measuredH="50" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5BHome%5D%20/%20Nurani</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="130" y="338" w="-1" h="-1" measuredW="176" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <size>13</size>
+        <text>Latest%20update%2010%20minutes%20ago</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="130" y="503" w="-1" h="-1" measuredW="183" measuredH="26" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%5BDiscussion%5D%20-%20Version%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Image" x="246" y="564" w="101" h="103" measuredW="77" measuredH="79" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Image" x="130" y="564" w="101" h="103" measuredW="77" measuredH="79" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="130" y="529" w="-1" h="-1" measuredW="178" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <size>13</size>
+        <text>Latest%20update%2015%20minutes%20ago</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="130" y="703" w="-1" h="-1" measuredW="211" measuredH="26" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%5BNurani%20Library%5D%20-%20Version%2011</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Image" x="246" y="764" w="101" h="103" measuredW="77" measuredH="79" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Image" x="130" y="764" w="101" h="103" measuredW="77" measuredH="79" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="130" y="729" w="-1" h="-1" measuredW="153" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <size>13</size>
+        <text>Latest%20update%203%20days%20ago</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Image" x="363" y="764" w="101" h="103" measuredW="77" measuredH="79" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Image" x="480" y="764" w="101" h="103" measuredW="77" measuredH="79" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

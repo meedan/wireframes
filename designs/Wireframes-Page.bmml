@@ -1,0 +1,58 @@
+<mockup version="1.0" skin="sketch" measuredW="1254" measuredH="1016" mockupW="1200" mockupH="1000">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="16" w="1200" h="1000" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <text>Meedan%20Wireframes%20-%20Home%0Ahttp%3A//wf.meedan.net</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="104" y="211" w="1100" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="true" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="__group__" x="104" y="98" w="191" h="106" measuredW="191" measuredH="106" zOrder="1" locked="true" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::PieChart" x="0" y="0" w="106" h="106" measuredW="180" measuredH="180" zOrder="0" locked="false" isInGroup="5"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="121" y="23" w="-1" h="-1" measuredW="69" measuredH="26" zOrder="1" locked="false" isInGroup="5">
+          <controlProperties>
+            <size>18</size>
+            <text>Meedan</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="121" y="49" w="-1" h="-1" measuredW="70" measuredH="26" zOrder="2" locked="false" isInGroup="5">
+          <controlProperties>
+            <size>18</size>
+            <text>nadeeM</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Title" x="130" y="231" w="-1" h="-1" measuredW="482" measuredH="50" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5BHome%5D%20/%20%5BNurani%5D%20/%20Homepage</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Image" x="147" y="311" w="231" h="235" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Canvas" x="130" y="296" w="1048" h="265" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Image" x="387" y="311" w="231" h="235" measuredW="77" measuredH="79" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Image" x="627" y="311" w="231" h="235" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Image" x="867" y="311" w="231" h="235" measuredW="77" measuredH="79" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
