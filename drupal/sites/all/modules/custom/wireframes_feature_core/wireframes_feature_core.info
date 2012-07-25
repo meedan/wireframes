@@ -33,6 +33,7 @@ features[variable][] = node_options_wireframe
 features[variable][] = node_preview_wireframe
 features[variable][] = node_submitted_wireframe
 features[variable][] = pathauto_taxonomy_term_pattern
+features[variable][] = site_frontpage
 features[variable][] = theme_default
 features[variable][] = theme_wireframes_settings
 features[views_view][] = pages
