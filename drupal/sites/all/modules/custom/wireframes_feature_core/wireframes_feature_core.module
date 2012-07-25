@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Wireframes Core feature.
+ */
+
+include_once 'wireframes_feature_core.features.inc';
