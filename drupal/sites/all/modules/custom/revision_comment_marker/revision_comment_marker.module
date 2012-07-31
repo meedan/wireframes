@@ -28,7 +28,7 @@ function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
   $revision      = array_shift($revisions);
   $prev_revision = (object) array('timestamp' => PHP_INT_MAX);
 
-  dpm($revisions, '$revisions');
+  // dpm($revisions, '$revisions');
 
   foreach (element_children($comments) as $key) {
     if (!is_numeric($key)) {
@@ -44,8 +44,8 @@ function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
 
     $comparison1 = $t_current < $t_revision ? ' < ' : ' >= ';
     $comparison2 = $t_current >= $t_prev_revision ? ' >= ' : ' < ';
-    dpm($t_current . $comparison1 . $t_revision . ' -- ' . $t_current . $comparison2 . $t_prev_revision, 'COMPARISON created:rev_timestamp && created:prev_rev_timestamp, ' . ($has_parent ? 'PARENT' : ''));
-    dpm(array($revision, $prev_revision));
+    // dpm($t_current . $comparison1 . $t_revision . ' -- ' . $t_current . $comparison2 . $t_prev_revision, 'COMPARISON created:rev_timestamp && created:prev_rev_timestamp, ' . ($has_parent ? 'PARENT' : ''));
+    // dpm(array($revision, $prev_revision));
 
     if ($first || ($t_current < $t_prev_revision && $t_current >= $t_revision && !$has_parent)) {
       $first = FALSE;

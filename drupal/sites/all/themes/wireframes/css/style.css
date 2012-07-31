@@ -240,6 +240,7 @@ div.status {
 .page-node .node-wireframe .field-name-field-asset {
   clear: both;
   background: #444;
+  height: 400px;
   width: 100%;
   overflow: auto;
   margin-bottom: 1em;
@@ -247,6 +248,7 @@ div.status {
 /* line 16, ../scss/_wireframes.scss */
 .page-node .node-wireframe .field-name-field-asset .field-items {
   padding: 1em;
+  width: 2500px;
 }
 /* line 20, ../scss/_wireframes.scss */
 .page-node .node-wireframe .field-name-field-asset .field-items .field-item {

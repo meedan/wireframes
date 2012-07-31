@@ -30,6 +30,8 @@ stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/wireframes.js
+
 ; Compass Support
 ; http://drupal.org/project/compass
 compass[status] = 1

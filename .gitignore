@@ -1,14 +1,18 @@
 # Never add SQL files to the repository
+databases/*
 *.sql
 *.sql.gz
 *.sql.bz2
+
+# SASS stuff
+.sass-cache
 
 # Project files, and other junk
 *.kpf
 *.komodoproject
 *.proj
 *.tmp
-.DS_Store
-Icon
+.DS_Store?
+Icon?
 Thumbs.db
 .bundle
