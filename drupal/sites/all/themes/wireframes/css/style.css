@@ -231,12 +231,86 @@ div.status {
   background: #ffd075;
 }
 
-/* line 2, ../scss/_wireframes.scss */
+/* line 11, ../scss/_custom.scss */
+#navigation {
+  border-top: 2px solid #444444;
+}
+/* line 15, ../scss/_custom.scss */
+#navigation ul#primary {
+  margin-top: 3px;
+}
+/* line 18, ../scss/_custom.scss */
+#navigation ul#primary li {
+  list-style-type: none;
+  display: block;
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 24, ../scss/_custom.scss */
+#navigation ul#primary li a {
+  font-size: 1.1em;
+  padding: 0.3em 1.0em;
+  background: #0998c8;
+  color: #fff;
+}
+/* line 30, ../scss/_custom.scss */
+#navigation ul#primary li a:hover {
+  background: #077ea6;
+  text-decoration: none;
+}
+
+/* line 39, ../scss/_custom.scss */
+.breadcrumb {
+  display: inline-block;
+  padding: 0;
+}
+/* line 43, ../scss/_custom.scss */
+.breadcrumb .separator {
+  padding: 0 0.5em;
+}
+
+/* line 48, ../scss/_custom.scss */
+h1 {
+  display: inline-block;
+}
+
+/* line 52, ../scss/_custom.scss */
+.tabs {
+  clear: both;
+  overflow: hidden;
+}
+
+/* line 57, ../scss/_custom.scss */
+#comments {
+  border-top: 2px solid #444444;
+  padding: 1em 10em 0 10em;
+}
+/* line 61, ../scss/_custom.scss */
+#comments .indented {
+  margin-left: 15px;
+  border-left: 5px solid #bbdafd;
+  padding-left: 5px;
+}
+/* line 67, ../scss/_custom.scss */
+#comments .comment {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #444444;
+}
+/* line 73, ../scss/_custom.scss */
+#comments .comment div.links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 1, ../scss/_page-node.scss */
 .page-node .submitted {
   float: right;
   padding: 0 0 1em 1em;
 }
-/* line 8, ../scss/_wireframes.scss */
+/* line 7, ../scss/_page-node.scss */
 .page-node .node-wireframe .field-name-field-asset {
   clear: both;
   background: #444;
@@ -245,21 +319,21 @@ div.status {
   overflow: auto;
   margin-bottom: 1em;
 }
-/* line 16, ../scss/_wireframes.scss */
+/* line 15, ../scss/_page-node.scss */
 .page-node .node-wireframe .field-name-field-asset .field-items {
   padding: 1em;
   width: 2500px;
 }
-/* line 20, ../scss/_wireframes.scss */
+/* line 19, ../scss/_page-node.scss */
 .page-node .node-wireframe .field-name-field-asset .field-items .field-item {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 30, ../scss/_wireframes.scss */
+/* line 29, ../scss/_page-node.scss */
 .page-node .links li {
   display: inline-block;
 }
-/* line 32, ../scss/_wireframes.scss */
+/* line 31, ../scss/_page-node.scss */
 .page-node .links li a {
   display: block;
   background: #95b734;
@@ -268,76 +342,46 @@ div.status {
   text-decoration: none;
 }
 
-/* line 12, ../scss/_custom.scss */
-#navigation {
-  border-top: 2px solid #444444;
-}
-/* line 16, ../scss/_custom.scss */
-#navigation ul#primary {
-  margin-top: 3px;
-}
-/* line 19, ../scss/_custom.scss */
-#navigation ul#primary li {
-  list-style-type: none;
-  display: block;
-  float: left;
-  margin-right: 0.5em;
-}
-/* line 25, ../scss/_custom.scss */
-#navigation ul#primary li a {
-  font-size: 1.1em;
-  padding: 0.3em 1.0em;
-  background: #0998c8;
-  color: #fff;
-}
-/* line 31, ../scss/_custom.scss */
-#navigation ul#primary li a:hover {
-  background: #077ea6;
-  text-decoration: none;
-}
-
-/* line 40, ../scss/_custom.scss */
-.breadcrumb {
-  display: inline-block;
-  padding: 0;
-}
-/* line 44, ../scss/_custom.scss */
-.breadcrumb .separator {
-  padding: 0 0.5em;
-}
-
-/* line 49, ../scss/_custom.scss */
-h1 {
-  display: inline-block;
-}
-
-/* line 53, ../scss/_custom.scss */
-.tabs {
+/* line 4, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page > .view-content > .views-row {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #444444;
   clear: both;
   overflow: hidden;
 }
-
-/* line 58, ../scss/_custom.scss */
-#comments {
-  border-top: 2px solid #444444;
-  padding: 1em 10em 0 10em;
+/* line 16, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default > .view-content > .views-row {
+  background: #eee;
+  padding: 1em;
+  margin: 0 1em 1em 0;
+  width: 517px;
+  float: left;
 }
-/* line 62, ../scss/_custom.scss */
-#comments .indented {
-  margin-left: 15px;
-  border-left: 5px solid #bbdafd;
-  padding-left: 5px;
+/* line 25, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default > .view-content > .views-row-even {
+  margin-right: 0;
 }
-/* line 68, ../scss/_custom.scss */
-#comments .comment {
-  position: relative;
-  margin-bottom: 1em;
-  padding-bottom: 31px;
-  border-bottom: 1px solid #444444;
+/* line 30, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-name {
+  display: block;
+  float: right;
+  width: 170px;
 }
-/* line 74, ../scss/_custom.scss */
-#comments .comment div.links {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+/* line 36, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset {
+  clear: both;
+}
+/* line 39, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 43, ../scss/_page-projects.scss */
+.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  margin-right: 0.5em;
 }

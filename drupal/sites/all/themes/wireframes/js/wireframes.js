@@ -26,4 +26,15 @@ Drupal.behaviors.wireframesAssets = {
   }
 };
 
+
+Drupal.behaviors.wireframesProjects = {
+  attach: function (context) {
+    // Utilize the jQuery Equal Heights plugin
+    $('.page-projects .view-id-projects.view-display-id-page ' +
+      '.view-pages.view-display-id-default > .view-content ' +
+      '> .views-row').equalHeightsPerRow();
+  }
+};
+
+
 })(jQuery);

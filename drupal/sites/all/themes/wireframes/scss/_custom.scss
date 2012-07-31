@@ -6,7 +6,6 @@
 // Import variables and mixins to be used.
 @import "_variables.scss";
 @import "_mixins.scss";
-@import "_wireframes.scss";
 
 
 #navigation {
@@ -79,3 +78,10 @@ h1 {
     }
   }
 }
+
+
+//
+// Pages
+//
+.page-node             { @import "_page-node.scss"; }
+.page-projects         { @import "_page-projects.scss"; }

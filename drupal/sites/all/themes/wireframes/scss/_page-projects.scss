@@ -1,0 +1,54 @@
+// The main projects view
+.view-id-projects.view-display-id-page {
+  & > .view-content {
+    & > .views-row {
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      border-bottom: 2px solid $text_color;
+      clear: both;
+      overflow: hidden;
+    }
+  }
+
+  // The list of pages inside each project
+  .view-pages.view-display-id-default {
+    & > .view-content {
+      & > .views-row {
+        background: #eee;
+        padding: 1em;
+        margin: 0 1em 1em 0;
+
+        width: 517px;
+        float: left;
+      }
+
+      & > .views-row-even {
+        margin-right: 0;
+      }
+    }
+
+    .views-field-name {
+      display: block;
+      float: right;
+      width: 170px;
+    }
+
+    .views-field-field-asset {
+      clear: both;
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+
+          display: inline-block;
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}
