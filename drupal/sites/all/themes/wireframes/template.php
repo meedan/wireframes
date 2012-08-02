@@ -111,6 +111,11 @@ function wireframes_breadcrumb($variables) {
       }
     }
 
+    // Fudge the taxonomy term view $bc.
+    if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2)) && isset($breadcrumb[1])) {
+      unset($breadcrumb[1]);
+    }
+
     // Return the breadcrumb with separators.
     if (!empty($breadcrumb)) {
       $breadcrumb_separator = '<span class="separator">' . theme_get_setting('wireframes_breadcrumb_separator') . '</span>';

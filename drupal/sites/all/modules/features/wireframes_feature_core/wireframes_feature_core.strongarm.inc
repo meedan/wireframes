@@ -21,7 +21,7 @@ function wireframes_feature_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_wireframe';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['comment_default_mode_wireframe'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -78,9 +78,6 @@ function wireframes_feature_core_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
         'custom_settings' => FALSE,
       ),
     ),
