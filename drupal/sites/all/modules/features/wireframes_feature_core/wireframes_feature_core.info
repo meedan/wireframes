@@ -20,7 +20,6 @@ features[features_api][] = api:1
 features[field][] = field_collection_item-field_asset_collection-field_asset_original
 features[field][] = field_collection_item-field_asset_collection-field_asset_snapshot
 features[field][] = node-wireframe-body
-features[field][] = node-wireframe-field_asset
 features[field][] = node-wireframe-field_asset_collection
 features[field][] = node-wireframe-field_project
 features[node][] = wireframe
