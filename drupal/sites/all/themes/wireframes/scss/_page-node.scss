@@ -26,6 +26,13 @@
         float: left;
         margin-right: 1em;
       }
+
+      // The download link for the original file
+      .field-name-field-asset-original {
+        a {
+          color: $meedan_yellow;
+        }
+      }
     }
   }
 }

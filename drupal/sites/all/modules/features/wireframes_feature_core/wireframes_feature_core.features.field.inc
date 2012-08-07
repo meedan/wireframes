@@ -48,8 +48,9 @@ function wireframes_feature_core_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
+          'module' => 'file',
           'settings' => array(),
-          'type' => 'hidden',
+          'type' => 'file_default',
           'weight' => '2',
         ),
         'full' => array(
