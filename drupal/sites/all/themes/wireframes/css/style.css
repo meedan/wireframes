@@ -314,11 +314,15 @@ h1 {
 .page-node .node-wireframe .field-name-field-asset-collection > .field-items .field-name-field-asset-original a {
   color: #fcc809;
 }
-/* line 41, ../scss/_page-node.scss */
+/* line 39, ../scss/_page-node.scss */
+.page-node .node-wireframe .field-name-field-current-status {
+  margin-bottom: 1em;
+}
+/* line 45, ../scss/_page-node.scss */
 .page-node .links li {
   display: inline-block;
 }
-/* line 43, ../scss/_page-node.scss */
+/* line 47, ../scss/_page-node.scss */
 .page-node .links li a {
   display: block;
   background: #76b423;
@@ -326,51 +330,51 @@ h1 {
   color: #fff;
   text-decoration: none;
 }
-/* line 50, ../scss/_page-node.scss */
+/* line 54, ../scss/_page-node.scss */
 .page-node .links li a:hover {
   background: #91d733;
 }
-/* line 58, ../scss/_page-node.scss */
+/* line 62, ../scss/_page-node.scss */
 .page-node #comments {
   border-top: 2px solid #444444;
   padding: 1em 10em 0 10em;
 }
-/* line 62, ../scss/_page-node.scss */
+/* line 66, ../scss/_page-node.scss */
 .page-node #comments .indented {
   margin-left: 15px;
   border-left: 5px solid #bbdafd;
   padding-left: 5px;
 }
-/* line 68, ../scss/_page-node.scss */
+/* line 72, ../scss/_page-node.scss */
 .page-node #comments .comment {
   position: relative;
   margin: 1em 0;
   padding-bottom: 31px;
   border-bottom: 1px solid #444444;
 }
-/* line 74, ../scss/_page-node.scss */
+/* line 78, ../scss/_page-node.scss */
 .page-node #comments .comment div.links {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-/* line 79, ../scss/_page-node.scss */
+/* line 83, ../scss/_page-node.scss */
 .page-node #comments .comment div.links li.comment-reply {
   display: none;
 }
-/* line 85, ../scss/_page-node.scss */
+/* line 89, ../scss/_page-node.scss */
 .page-node #comments .revision-comment-marker {
   clear: both;
   background: #2e94d3;
   margin-bottom: 5px;
 }
-/* line 91, ../scss/_page-node.scss */
+/* line 95, ../scss/_page-node.scss */
 .page-node #comments .revision-comment-marker a {
   display: inline-block;
   padding: 5px 10px;
   color: #fff;
 }
-/* line 96, ../scss/_page-node.scss */
+/* line 100, ../scss/_page-node.scss */
 .page-node #comments .revision-comment-marker a:hover {
   background: #58aadc;
   text-decoration: none;
@@ -395,29 +399,44 @@ h1 {
   float: left;
 }
 /* line 26, ../scss/_section-projects.scss */
+.page-projects .view-pages > .view-content > .current-status-in-progress,
+.page-taxonomy .view-pages > .view-content > .current-status-in-progress {
+  background: #feeaa0;
+}
+/* line 29, ../scss/_section-projects.scss */
+.page-projects .view-pages > .view-content > .current-status-needs-review,
+.page-taxonomy .view-pages > .view-content > .current-status-needs-review {
+  background: #facbbd;
+}
+/* line 32, ../scss/_section-projects.scss */
+.page-projects .view-pages > .view-content > .current-status-done,
+.page-taxonomy .view-pages > .view-content > .current-status-done {
+  background: #d6f0b3;
+}
+/* line 36, ../scss/_section-projects.scss */
 .page-projects .view-pages > .view-content > .views-row-even,
 .page-taxonomy .view-pages > .view-content > .views-row-even {
   margin-right: 0;
 }
-/* line 31, ../scss/_section-projects.scss */
+/* line 41, ../scss/_section-projects.scss */
 .page-projects .view-pages .views-field-name,
 .page-taxonomy .view-pages .views-field-name {
   display: block;
   float: right;
   width: 170px;
 }
-/* line 37, ../scss/_section-projects.scss */
+/* line 47, ../scss/_section-projects.scss */
 .page-projects .view-pages .views-field-field-asset-collection,
 .page-taxonomy .view-pages .views-field-field-asset-collection {
   clear: both;
 }
-/* line 40, ../scss/_section-projects.scss */
+/* line 50, ../scss/_section-projects.scss */
 .page-projects .view-pages .views-field-field-asset-collection ul,
 .page-taxonomy .view-pages .views-field-field-asset-collection ul {
   padding: 0;
   margin: 0;
 }
-/* line 44, ../scss/_section-projects.scss */
+/* line 54, ../scss/_section-projects.scss */
 .page-projects .view-pages .views-field-field-asset-collection ul li,
 .page-taxonomy .view-pages .views-field-field-asset-collection ul li {
   padding: 0;

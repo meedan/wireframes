@@ -32,6 +32,7 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'current_status-[field_current_status]';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'changed' => 'changed',
@@ -52,6 +53,32 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['relationships']['uid']['required'] = 0;
+  /* Field: Content: Current status */
+  $handler->display->display_options['fields']['field_current_status']['id'] = 'field_current_status';
+  $handler->display->display_options['fields']['field_current_status']['table'] = 'field_data_field_current_status';
+  $handler->display->display_options['fields']['field_current_status']['field'] = 'field_current_status';
+  $handler->display->display_options['fields']['field_current_status']['label'] = '';
+  $handler->display->display_options['fields']['field_current_status']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_current_status']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_current_status']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_current_status']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_current_status']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_current_status']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_current_status']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_current_status']['type'] = 'list_key';
+  $handler->display->display_options['fields']['field_current_status']['field_api_classes'] = 0;
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';

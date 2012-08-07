@@ -278,7 +278,7 @@ function wireframes_feature_core_field_default_fields() {
             'view_mode' => 'full',
           ),
           'type' => 'field_collection_fields',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -300,6 +300,75 @@ function wireframes_feature_core_field_default_fields() {
         'settings' => array(),
         'type' => 'field_collection_embed',
         'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-wireframe-field_current_status'.
+  $fields['node-wireframe-field_current_status'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_current_status',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'not_started' => 'Not started',
+          'in_progress' => 'In progress',
+          'needs_review' => 'Needs review',
+          'done' => 'Done',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'wireframe',
+      'default_value' => array(
+        0 => array(
+          'value' => 'not_started',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '1',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_current_status',
+      'label' => 'Current status',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '2',
       ),
     ),
   );
@@ -380,6 +449,7 @@ function wireframes_feature_core_field_default_fields() {
   t('Asset original');
   t('Asset snapshot');
   t('Body');
+  t('Current status');
   t('For example, the a PNG snapshot of a Photoshop PSD file or a PNG snapshot of a BMML file.');
   t('For example, the actual Photoshop PSD or BMML file.');
   t('Project');

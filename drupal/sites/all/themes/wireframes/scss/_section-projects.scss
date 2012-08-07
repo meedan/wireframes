@@ -23,6 +23,16 @@
       float: left;
     }
 
+    & > .current-status-in-progress {
+      background: lighten($meedan_yellow, 30%);
+    }
+    & > .current-status-needs-review {
+      background: lighten($meedan_orange, 35%);
+    }
+    & > .current-status-done {
+      background: lighten($meedan_green, 40%);
+    }
+
     & > .views-row-even {
       margin-right: 0;
     }
