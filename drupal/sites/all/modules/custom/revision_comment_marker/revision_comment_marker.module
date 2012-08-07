@@ -77,7 +77,7 @@ function theme_revision_comment_marker(&$variables) {
              '<span class="version-label">' . t('Version') . '</span> ' .
              '<span class="version-number">' . $revision->version . '</span> ' .
              '<span class="version-date"> &mdash; ' . format_date($revision->timestamp) . '</span> ',
-             "node/$node->nid/revisions/$revision->vid",
+             "node/$node->nid/revisions/$revision->vid/view",
              array('html' => TRUE)
             ) .
          '</div>';
