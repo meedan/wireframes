@@ -81,7 +81,9 @@ h1 {
 
 
 //
-// Pages
+// Pages and sections
 //
 .page-node             { @import "_page-node.scss"; }
-.page-projects         { @import "_page-projects.scss"; }
+
+.page-projects,
+.page-taxonomy         { @import "_section-projects.scss"; }

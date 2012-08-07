@@ -342,43 +342,50 @@ h1 {
   text-decoration: none;
 }
 
-/* line 4, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page > .view-content > .views-row {
+/* line 4, ../scss/_section-projects.scss */
+.page-projects .view-id-projects.view-display-id-page > .view-content > .views-row,
+.page-taxonomy .view-id-projects.view-display-id-page > .view-content > .views-row {
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 2px solid #444444;
   clear: both;
   overflow: hidden;
 }
-/* line 16, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default > .view-content > .views-row {
+/* line 17, ../scss/_section-projects.scss */
+.page-projects .view-pages > .view-content > .views-row,
+.page-taxonomy .view-pages > .view-content > .views-row {
   background: #eee;
   padding: 1em;
   margin: 0 1em 1em 0;
   width: 517px;
   float: left;
 }
-/* line 25, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default > .view-content > .views-row-even {
+/* line 26, ../scss/_section-projects.scss */
+.page-projects .view-pages > .view-content > .views-row-even,
+.page-taxonomy .view-pages > .view-content > .views-row-even {
   margin-right: 0;
 }
-/* line 30, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-name {
+/* line 31, ../scss/_section-projects.scss */
+.page-projects .view-pages .views-field-name,
+.page-taxonomy .view-pages .views-field-name {
   display: block;
   float: right;
   width: 170px;
 }
-/* line 36, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset {
+/* line 37, ../scss/_section-projects.scss */
+.page-projects .view-pages .views-field-field-asset,
+.page-taxonomy .view-pages .views-field-field-asset {
   clear: both;
 }
-/* line 39, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset ul {
+/* line 40, ../scss/_section-projects.scss */
+.page-projects .view-pages .views-field-field-asset ul,
+.page-taxonomy .view-pages .views-field-field-asset ul {
   padding: 0;
   margin: 0;
 }
-/* line 43, ../scss/_page-projects.scss */
-.page-projects .view-id-projects.view-display-id-page .view-pages.view-display-id-default .views-field-field-asset ul li {
+/* line 44, ../scss/_section-projects.scss */
+.page-projects .view-pages .views-field-field-asset ul li,
+.page-taxonomy .view-pages .views-field-field-asset ul li {
   padding: 0;
   margin: 0;
   list-style: none;
