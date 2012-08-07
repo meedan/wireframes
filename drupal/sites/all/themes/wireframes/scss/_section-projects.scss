@@ -15,7 +15,7 @@
 .view-pages {
   & > .view-content {
     & > .views-row {
-      background: #eee;
+      background: $page_group_color;
       padding: 1em;
       margin: 0 1em 1em 0;
 
@@ -34,7 +34,7 @@
     width: 170px;
   }
 
-  .views-field-field-asset {
+  .views-field-field-asset-collection {
     clear: both;
 
     ul {

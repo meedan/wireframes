@@ -24,11 +24,11 @@
       a {
         font-size: 1.1em;
         padding: 0.3em 1.0em;
-        background: $nav_color;
+        background: $meedan_blue;
         color: #fff;
 
         &:hover {
-          background: darken($nav_color, 7%);
+          background: lighten($meedan_blue, 10%);
           text-decoration: none;
         }
       }

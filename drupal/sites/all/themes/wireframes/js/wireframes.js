@@ -2,17 +2,19 @@
 
 Drupal.behaviors.wireframesAssets = {
   attach: function (context) {
-    var $assets     = $('body.node-type-wireframe .field-name-field-asset', context),
-        $fieldItems = $('.field-items', $assets),
+    var $assets     = $('body.node-type-wireframe .field-name-field-asset-collection', context),
+        $fieldItems = $('> .field-items', $assets),
         highestItem = 0,
         fullWidth   = 0
         padding     = parseInt($fieldItems.css('padding-top'), 10)
                     + parseInt($fieldItems.css('padding-bottom'), 10);
 
-    $('.field-item', $assets).each(function () {
+    $('> .field-item', $fieldItems).each(function () {
       var $this  = $(this),
           width  = $this.outerWidth(true),
           height = $this.outerHeight(true);
+
+      console.log(height);
 
       highestItem = height > highestItem ? height : highestItem;
       fullWidth  += width;
@@ -20,7 +22,9 @@ Drupal.behaviors.wireframesAssets = {
 
     // Add extra height to account for box padding, also a little extra to
     // ensure all browsers are happy
-    highestItem += padding + 2;
+    highestItem += padding + 15;
+
+    console.log(highestItem);
 
     $assets.css({ height: highestItem });
     $fieldItems.css({ width: fullWidth });
@@ -31,9 +35,7 @@ Drupal.behaviors.wireframesAssets = {
 Drupal.behaviors.wireframesProjects = {
   attach: function (context) {
     // Utilize the jQuery Equal Heights plugin
-    $('.page-projects .view-id-projects.view-display-id-page ' +
-      '.view-pages.view-display-id-default > .view-content ' +
-      '> .views-row').equalHeightsPerRow();
+    $('.view-pages > .view-content > .views-row').equalHeightsPerRow();
   }
 };
 

@@ -4,7 +4,7 @@
 }
 
 .node-wireframe {
-  .field-name-field-asset {
+  .field-name-field-asset-collection {
     clear: both;
     background: #444;
     height: 400px;
@@ -12,11 +12,16 @@
     overflow: auto;
     margin-bottom: 1em;
 
-    .field-items {
+    & > .field-items {
       padding: 1em;
       width: 2500px;
+      overflow: hidden;
 
-      .field-item {
+      .field-collection-view-links {
+        display: none;
+      }
+
+      & > .field-item {
         display: block;
         float: left;
         margin-right: 1em;
@@ -30,10 +35,14 @@
     display: inline-block;
     a {
       display: block;
-      background: $node_links_color;
+      background: $meedan_green;
       padding: 0.5em 1.0em;
       color: #fff;
       text-decoration: none;
+
+      &:hover {
+        background: lighten($meedan_green, 10%);
+      }
     }
   }
 }
@@ -69,16 +78,16 @@
   .revision-comment-marker {
     clear: both;
 
-    background: $rev_marker_color;
+    background: $meedan_blue;
     margin-bottom: 5px;
 
     a {
       display: inline-block;
       padding: 5px 10px;
-      color: $rev_marker_text_color;
+      color: #fff;
 
       &:hover {
-        background: lighten($rev_marker_color, 30%);
+        background: lighten($meedan_blue, 10%);
         text-decoration: none;
       }
     }
