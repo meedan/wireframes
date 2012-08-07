@@ -5,6 +5,17 @@
 //        2) Comments ordering is OLDEST --> NEWEST
 
 /**
+ * Implements hook_theme().
+ */
+function revision_comment_marker_theme() {
+  return array(
+    'revision_comment_marker' => array(
+      'arguments' => array('node' => NULL, 'revision' => NULL),
+    ),
+  );
+}
+
+/**
  * Implements hook_preprocess_comment_wrapper().
  */
 function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
@@ -34,14 +45,14 @@ function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
     $comment = &$comments[$key];
 
     while ($revision && $revision->timestamp < $comment['#comment']->created) {
-      revision_comment_marker_inject_marker($node, $revision, $comment);
+      revision_comment_marker_inject_marker($comment, $node, $revision);
       $revision = array_shift($revisions);
     }
   }
 
   if ($comments && $revision) {
     $last_comment = array();
-    revision_comment_marker_inject_marker($node, $revision, $last_comment);
+    revision_comment_marker_inject_marker($last_comment, $node, $revision);
     $comments[] = $last_comment;
   }
 }
@@ -50,21 +61,24 @@ function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
  * Adds a marker above a comment to indicate that a revision occurred before
  * this comment was posted.
  */
-function revision_comment_marker_inject_marker($node, $revision, &$comment) {
-  if (!isset($comment['revision_comment_marker'])) {
-    $comment['revision_comment_marker'] = array(
-      '#weight' => -100,
-    );
-  }
+function revision_comment_marker_inject_marker(&$comment, $node, $revision) {
+  $comment['#prefix'] .= theme('revision_comment_marker', array('node' => $node, 'revision' => $revision));
+}
 
-  $comment['revision_comment_marker'][$revision->version] = array(
-    '#markup' => '<div id="revision-comment-marker-' . $revision->version . '" class="revision-comment-marker">' .
-                   l(
-                     '<span class="version-label">' . t('Version') . '</span> ' .
-                     '<span class="version-number">' . $revision->version . '</span> ',
-                     "node/$node->nid/revisions/$revision->vid",
-                     array('html' => TRUE)
-                    ) .
-                 '</div>'
-  );
+/**
+ * Theme function to render the comment marker.
+ */
+function theme_revision_comment_marker(&$variables) {
+  $node     = $variables['node'];
+  $revision = $variables['revision'];
+
+  return '<div id="revision-comment-marker-' . $revision->version . '" class="revision-comment-marker">' .
+           l(
+             '<span class="version-label">' . t('Version') . '</span> ' .
+             '<span class="version-number">' . $revision->version . '</span> ' .
+             '<span class="version-date"> &mdash; ' . format_date($revision->timestamp) . '</span> ',
+             "node/$node->nid/revisions/$revision->vid",
+             array('html' => TRUE)
+            ) .
+         '</div>';
 }

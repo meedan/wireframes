@@ -18,8 +18,9 @@ Drupal.behaviors.wireframesAssets = {
       fullWidth  += width;
     });
 
-    // Add extra height to account for box padding
-    highestItem += padding;
+    // Add extra height to account for box padding, also a little extra to
+    // ensure all browsers are happy
+    highestItem += padding + 2;
 
     $assets.css({ height: highestItem });
     $fieldItems.css({ width: fullWidth });

@@ -17,8 +17,8 @@
       width: 2500px;
 
       .field-item {
-        display: inline-block;
-        // float: left;
+        display: block;
+        float: left;
         margin-right: 1em;
       }
     }
@@ -34,6 +34,53 @@
       padding: 0.5em 1.0em;
       color: #fff;
       text-decoration: none;
+    }
+  }
+}
+
+
+#comments {
+  border-top: 2px solid $text_color;
+  padding: 1em 10em 0 10em;
+
+  .indented {
+    margin-left: 15px;
+    border-left: 5px solid #bbdafd;
+    padding-left: 5px;
+  }
+
+  .comment {
+    position: relative;
+    margin: 1em 0;
+    padding-bottom: 31px;
+    border-bottom: 1px solid $text_color;
+
+    div.links {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      li.comment-reply {
+        display: none;
+      }
+    }
+  }
+
+  .revision-comment-marker {
+    clear: both;
+
+    background: $rev_marker_color;
+    margin-bottom: 5px;
+
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      color: $rev_marker_text_color;
+
+      &:hover {
+        background: lighten($rev_marker_color, 30%);
+        text-decoration: none;
+      }
     }
   }
 }
