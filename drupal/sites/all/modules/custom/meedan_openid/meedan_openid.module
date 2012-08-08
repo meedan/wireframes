@@ -1,10 +1,21 @@
 <?php
 
 /**
+ * API function to check whether user was authenticated via OpenID.
+ */
+function meedan_openid_user_is_external($account = null) {
+  if (empty($account)) {
+    global $user;
+    $account = $user;
+  }
+  return db_query("SELECT * FROM {authmap} WHERE uid = :uid AND module = 'openid'", array(':uid' => $account->uid))->rowCount() > 0;
+}
+
+/**
  * Implements hook_form_FORM_ID_alter() for `user_profile_form`.
  */
 function meedan_openid_form_user_profile_form_alter(&$form, &$form_state) {
-  if (meedan_openid_user_external()) {
+  if (meedan_openid_user_is_external()) {
     $form['account']['current_pass']['#access'] = false;
     $form['account']['pass']['#access'] = false;
     $form['account']['mail']['#disabled'] = true;
@@ -31,20 +42,24 @@ function meedan_openid_form_user_login_alter(&$form, &$form_state) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter() for `user_logini_block`.
+ * Implements hook_form_FORM_ID_alter() for `user_login_block`.
  */
 function meedan_openid_form_user_login_block_alter(&$form, &$form_state) {
   meedan_openid_form_user_login_alter($form, $form_state);
 }
 
 /**
- * API function to check whether user was authenticated via OpenID.
+ * Implements hook_menu_alter().
  */
-function meedan_openid_user_external($account = null) {
-  if (empty($account)) {
-    global $user;
-    $account = $user;
-  }
-  return db_query("SELECT * FROM {authmap} WHERE uid = :uid AND module = 'openid'", array(':uid' => $account->uid))->rowCount() > 0;
+function meedan_openid_menu_alter(&$items) {
+  $items['user/password']['access callback'] = false;
+  $items['user/register']['access callback'] = '_meedan_openid_check_session';
+}
+
+/**
+ * Helper to check if we're in the middle of an OpenID registration.
+ */
+function _meedan_openid_check_session() {
+  return isset($_SESSION['openid']['response']);
 }
 
