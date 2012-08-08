@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter() for `user_profile_form`.
+ */
+function meedan_openid_form_user_profile_form_alter(&$form, &$form_state) {
+  if (meedan_openid_user_external()) {
+    $form['account']['current_pass']['#access'] = false;
+    $form['account']['pass']['#access'] = false;
+    $form['account']['mail']['#disabled'] = true;
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function meedan_openid_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter' && isset($implementations['meedan_openid'])) {
+    $group = $implementations['meedan_openid'];
+    unset($implementations['meedan_openid']);
+    $implementations['meedan_openid'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for `user_login`.
+ */
+function meedan_openid_form_user_login_alter(&$form, &$form_state) {
+  $form['openid_identifier']['#default_value'] = variable_get('meedan_openid_provider', 'https://www.google.com/accounts/o8/id');
+  $form['openid_identifier']['#title'] = t('Log in using your Meedan credentials');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for `user_logini_block`.
+ */
+function meedan_openid_form_user_login_block_alter(&$form, &$form_state) {
+  meedan_openid_form_user_login_alter($form, $form_state);
+}
+
+/**
+ * API function to check whether user was authenticated via OpenID.
+ */
+function meedan_openid_user_external($account = null) {
+  if (empty($account)) {
+    global $user;
+    $account = $user;
+  }
+  return db_query("SELECT * FROM {authmap} WHERE uid = :uid AND module = 'openid'", array(':uid' => $account->uid))->rowCount() > 0;
+}
+

@@ -1,0 +1,5 @@
+name = Meedan OpenID
+description = Meedan-specific customizations for OpenID login.
+package = Meedan
+dependencies[] = openid
+core = 7.x
