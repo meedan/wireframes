@@ -15,7 +15,7 @@ function meedan_openid_user_is_external($account = null) {
  * Implements hook_form_FORM_ID_alter() for `user_profile_form`.
  */
 function meedan_openid_form_user_profile_form_alter(&$form, &$form_state) {
-  if (meedan_openid_user_is_external()) {
+  if (meedan_openid_user_is_external($form['#user'])) {
     $form['account']['current_pass']['#access'] = false;
     $form['account']['pass']['#access'] = false;
     $form['account']['mail']['#disabled'] = true;
