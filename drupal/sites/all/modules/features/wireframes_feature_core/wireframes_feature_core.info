@@ -15,6 +15,7 @@ dependencies[] = pathauto
 dependencies[] = revision_comment_marker
 dependencies[] = search
 dependencies[] = strongarm
+dependencies[] = tac_lite
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = views_field_view
