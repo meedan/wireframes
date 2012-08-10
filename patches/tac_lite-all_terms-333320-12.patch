@@ -1,0 +1,75 @@
+diff --git a/tac_lite.module b/tac_lite.module
+index 52701a1..6f2925b 100644
+--- a/tac_lite.module
++++ b/tac_lite.module
+@@ -279,15 +279,6 @@ function tac_lite_admin_scheme_form($form, $form_state, $i) {
+       foreach ($vids as $vid) {
+         // Build a taxonomy select form element for this vocab
+         $v = $vocabularies[$vid];
+-        $tree = taxonomy_get_tree($v->vid);
+-        $options = array(0 => '<' . t('none') . '>');
+-        if ($tree) {
+-          foreach ($tree as $term) {
+-            $choice = new stdClass();
+-            $choice->option = array($term->tid => str_repeat('-', $term->depth) . $term->name);
+-            $options[] = $choice;
+-          }
+-        }
+         $default_values = isset($defaults[$vid]) ? $defaults[$vid] : NULL;
+         $form['tac_lite_grants_scheme_' . $i][$rid][$vid] = _tac_lite_term_select($v, $default_values);
+       }
+@@ -537,7 +528,7 @@ function _tac_lite_get_terms_by_nid($nid) {
+  */
+ function _tac_lite_term_select($v, $default_values = array()) {
+   $tree = taxonomy_get_tree($v->vid);
+-  $options = array(0 => '<' . t('none') . '>');
++  $options = array(0 => '<' . t('none') . '>', -$v->vid => '<' . t('all') . '>');
+   if ($tree) {
+     foreach ($tree as $term) {
+       $choice = new stdClass();
+@@ -588,6 +579,21 @@ function _tac_lite_user_tids($account, $scheme) {
+     }
+   }
+ 
++  // convert negative $tids to all vocabulary terms
++  foreach ($grants as $tid) {
++    if ($tid < 0) {
++      unset($grants[$tid]);
++      $tids = db_query("SELECT tid FROM {taxonomy_term_data} WHERE vid = :vid AND tid NOT IN (:tids)", array(
++        ':vid' => -$tid,
++        ':tids' => array_values($grants),
++      ))
++      ->fetchCol();
++      if (count($tids)) {
++        $grants = array_merge($grants, $tids);
++      }
++    }
++  }
++
+   // Because of some flakyness in the form API and the form we insert under
+   // user settings, we may have a bogus entry with vid set
+   // to ''. Here we make sure not to return that.
+@@ -646,6 +652,13 @@ function tac_lite_query_term_access_alter(QueryAlterableInterface $query) {
+       $term_visibility = TRUE;
+     }
+   }
++  // <all> terms in a vocabulary are encoded as negative $vid
++  $all = array();
++  foreach ($tids as $tid) {
++    if ($tid < 0) {
++      $all[] = -$tid;
++    }
++  }
+ 
+   if ($term_visibility) {
+     // HELP: What is the proper way to find the alias of the primary table here?
+@@ -662,6 +675,9 @@ function tac_lite_query_term_access_alter(QueryAlterableInterface $query) {
+     $or = db_or();
+     $or->condition($primary_table . '.tid', $tids, 'IN');
+     $or->condition('tac_td.vid', $vids, 'NOT IN');
++    if (!empty($all)) {
++      $or->condition('tac_td.vid', $all, 'IN');
++    }
+     $query->condition($or);
+   }
+ }
