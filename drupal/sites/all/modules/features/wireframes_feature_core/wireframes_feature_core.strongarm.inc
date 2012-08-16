@@ -41,6 +41,98 @@ function wireframes_feature_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_available_alerts';
+  $strongarm->value = array(
+    1 => '1',
+    2 => '2',
+  );
+  $export['comment_notify_available_alerts'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_comment_notify_default_mailtext';
+  $strongarm->value = 'Hi [comment-subscribed:author],
+
+[comment:author] has commented on: "[comment:node:title]"
+
+----
+[comment:title]
+[comment:body]
+----
+
+You can view the comment at the following url
+[comment:url]
+
+You can stop receiving emails when someone replies to this post,
+by going to [comment-subscribed:unsubscribe-url]
+
+You can set up auto-following feature for all future posts
+by creating your own user with a few clicks here [site:login-url]
+
+-- [site:name] team
+[site:url]';
+  $export['comment_notify_comment_notify_default_mailtext'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_default_anon_mailalert';
+  $strongarm->value = '1';
+  $export['comment_notify_default_anon_mailalert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_default_registered_mailalert';
+  $strongarm->value = '1';
+  $export['comment_notify_default_registered_mailalert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_node_notify_default_mailalert';
+  $strongarm->value = 1;
+  $export['comment_notify_node_notify_default_mailalert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_node_notify_default_mailtext';
+  $strongarm->value = 'Hi [comment:node:author],
+
+You have received a comment on: "[comment:node:title]"
+
+----
+[comment:title]
+[comment:body]
+----
+
+You can view the comment at the following url
+[comment:url]
+
+You will receive emails like this for all replies to your posts. You can
+disable this by logging in and changing the settings on your user account at
+[comment:node:author:edit-url].
+
+-- [site:name] team
+[site:url]';
+  $export['comment_notify_node_notify_default_mailtext'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_notify_node_types';
+  $strongarm->value = array(
+    'wireframe' => 'wireframe',
+    'article' => 0,
+    'page' => 0,
+  );
+  $export['comment_notify_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_wireframe';
   $strongarm->value = '1';
   $export['comment_preview_wireframe'] = $strongarm;
@@ -135,6 +227,13 @@ function wireframes_feature_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'lightbox2_slideshow_automatic_start';
+  $strongarm->value = 0;
+  $export['lightbox2_slideshow_automatic_start'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_wireframe';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -186,6 +285,13 @@ function wireframes_feature_core_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
   $strongarm->value = '[term:vocabulary]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'queue_mail_keys';
+  $strongarm->value = 'comment_notify_*';
+  $export['queue_mail_keys'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
