@@ -1,0 +1,4 @@
+name = Meedan Notifications
+description = Meedan-specific notifications and email logic.
+package = Meedan
+core = 7.x

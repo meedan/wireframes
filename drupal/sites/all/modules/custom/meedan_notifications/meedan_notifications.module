@@ -1,0 +1,11 @@
+<?php
+
+/** 
+ * Implements hook_mail_alter().
+ */
+function meedan_notifications_mail_alter(&$message) {
+  if ($message['from'] == variable_get('site_mail', '')) {
+    $message['from'] = variable_get('site_name', '') . ' <' . variable_get('site_mail', '') . '>';
+  }
+}
+
