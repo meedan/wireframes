@@ -121,6 +121,20 @@ function wireframes_feature_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'lightbox2_disable_resize';
+  $strongarm->value = 1;
+  $export['lightbox2_disable_resize'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lightbox2_disable_zoom';
+  $strongarm->value = 1;
+  $export['lightbox2_disable_zoom'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_wireframe';
   $strongarm->value = array(
     0 => 'main-menu',

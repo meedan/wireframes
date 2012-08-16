@@ -436,7 +436,7 @@ Lightbox = {
       Lightbox.inprogress = true;
       Lightbox.activeImage = imageNum;
 
-      if (Lightbox.disableResize && !Lightbox.isSlideshow) {
+      if (Lightbox.disableResize/* && !Lightbox.isSlideshow*/) { // PATCH: If disableResize is set, then disable resize! see: http://drupal.org/node/610748
         zoomIn = true;
       }
       Lightbox.isZoomedIn = zoomIn;
