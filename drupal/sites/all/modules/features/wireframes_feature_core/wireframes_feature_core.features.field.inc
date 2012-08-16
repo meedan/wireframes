@@ -69,7 +69,7 @@ function wireframes_feature_core_field_default_fields() {
       'entity_type' => 'field_collection_item',
       'field_name' => 'field_asset_original',
       'label' => 'Asset original',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
@@ -84,7 +84,7 @@ function wireframes_feature_core_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '4',
+        'weight' => 0,
       ),
     ),
   );
@@ -169,7 +169,7 @@ function wireframes_feature_core_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '1',
       ),
     ),
   );
