@@ -4,8 +4,9 @@
  * Implements hook_mail_alter().
  */
 function meedan_notifications_mail_alter(&$message) {
+  dd($message);
   if ($message['from'] == variable_get('site_mail', '')) {
-    $message['from'] = variable_get('site_name', '') . ' <' . variable_get('site_mail', '') . '>';
+    $message['from'] = $message['headers']['From'] = variable_get('site_name', '') . ' <' . variable_get('site_mail', '') . '>';
   }
 }
 
