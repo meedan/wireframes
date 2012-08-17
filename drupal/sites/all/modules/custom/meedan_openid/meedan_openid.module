@@ -39,6 +39,13 @@ function meedan_openid_module_implements_alter(&$implementations, $hook) {
 function meedan_openid_form_user_login_alter(&$form, &$form_state) {
   $form['openid_identifier']['#default_value'] = variable_get('meedan_openid_provider', 'https://www.google.com/accounts/o8/id');
   $form['openid_identifier']['#title'] = t('Log in using your Meedan credentials');
+  $form['openid_identifier']['#element_validate'][] = '_meedan_openid_identifier_validate';
+}
+
+function _meedan_openid_identifier_validate($element, &$form_state, $form) {
+  if ($element['#value'] != variable_get('meedan_openid_provider', 'https://www.google.com/accounts/o8/id')) {
+    form_error($element, t('Can only use default Meedan provider at this time.'));
+  }
 }
 
 /**
