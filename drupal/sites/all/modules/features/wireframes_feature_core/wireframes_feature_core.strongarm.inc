@@ -57,7 +57,6 @@ function wireframes_feature_core_strongarm() {
 [comment:author] has commented on: "[comment:node:title]"
 
 ----
-[comment:title]
 [comment:body]
 ----
 
@@ -104,7 +103,6 @@ by creating your own user with a few clicks here [site:login-url]
 You have received a comment on: "[comment:node:title]"
 
 ----
-[comment:title]
 [comment:body]
 ----
 
