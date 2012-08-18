@@ -43,7 +43,7 @@ function meedan_openid_form_user_login_alter(&$form, &$form_state) {
 }
 
 function _meedan_openid_identifier_validate($element, &$form_state, $form) {
-  if ($element['#value'] != variable_get('meedan_openid_provider', 'https://www.google.com/accounts/o8/id')) {
+  if (!empty($element['#value']) && $element['#value'] != variable_get('meedan_openid_provider', 'https://www.google.com/accounts/o8/id')) {
     form_error($element, t('Can only use default Meedan provider at this time.'));
   }
 }

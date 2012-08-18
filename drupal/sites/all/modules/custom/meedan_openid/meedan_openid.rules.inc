@@ -17,6 +17,7 @@ function meedan_openid_rules_condition_info() {
 }
 
 function meedan_openid_rules_user_has_authmap($user, $settings) {
-  return meedan_openid_user_is_external($user); 
+  $email = explode('@', $user->mail);
+  return ($email[1] == variable_get('meedan_openid_domain', 'meedan.net') && meedan_openid_user_is_external($user));
 }
 
