@@ -324,7 +324,8 @@ function wireframes_feature_core_field_default_fields() {
         'allowed_values' => array(
           'not_started' => 'Not started',
           'in_progress' => 'In progress',
-          'needs_review' => 'Needs review',
+          'needs_review' => 'Needs signoff',
+          'approved' => 'Approved',
           'done' => 'Done',
         ),
         'allowed_values_function' => '',
