@@ -69,7 +69,7 @@ function wireframes_feature_core_field_default_fields() {
       'entity_type' => 'field_collection_item',
       'field_name' => 'field_asset_original',
       'label' => 'Asset original',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
