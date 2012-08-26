@@ -201,6 +201,11 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'pages:page_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Content: Updated/commented date */
+  $handler->display->display_options['sorts']['last_updated']['id'] = 'last_updated';
+  $handler->display->display_options['sorts']['last_updated']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['sorts']['last_updated']['field'] = 'last_updated';
+  $handler->display->display_options['sorts']['last_updated']['order'] = 'DESC';
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
@@ -537,6 +542,7 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['fields']['view']['empty_zero'] = 0;
   $handler->display->display_options['fields']['view']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['view']['view'] = 'pages';
+  $handler->display->display_options['fields']['view']['display'] = 'page_1';
   $handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
   $handler->display->display_options['fields']['view']['query_aggregation'] = 0;
   /* Filter criterion: Taxonomy vocabulary: Machine name */
