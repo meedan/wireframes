@@ -1,0 +1,5 @@
+name = Wireframes Updater
+description = Updater runner for wf.meedan.net
+core = 7.x
+version = 7.x-1.0
+package = Wireframes

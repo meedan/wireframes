@@ -200,7 +200,7 @@ disable this by logging in and changing the settings on your user account at
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),

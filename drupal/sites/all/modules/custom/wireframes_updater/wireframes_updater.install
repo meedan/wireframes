@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function wireframes_updater_install() {
+  wireframes_updater_update_7000();
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function wireframes_updater_update_7000() {
+  $ret = array();
+
+  if (!db_table_exists('field_data_field_asset') || !db_table_exists('field_revision_field_asset')) {
+    $ret[] = array('success' => FALSE, 'query' => "Update features first!  Ensure the field_asset is properly set up.");
+    return $ret;
+  }
+
+  $result = db_query("SELECT frfac.*, f.*
+                        FROM field_data_field_asset_collection frfac
+                  INNER JOIN field_data_field_asset_snapshot fdfas ON frfac.field_asset_collection_value = fdfas.entity_id
+                  INNER JOIN file_managed AS f ON fdfas.field_asset_snapshot_fid = f.fid
+                    ORDER BY frfac.entity_id ASC, frfac.revision_id DESC");
+
+  foreach ($result as $row) {
+    $data = array(
+      ':entity_type'             => $row->entity_type,
+      ':bundle'                  => $row->bundle,
+      ':deleted'                 => $row->deleted,
+      ':entity_id'               => $row->entity_id,
+      ':revision_id'             => $row->revision_id,
+      ':language'                => $row->language,
+      ':delta'                   => $row->delta,
+      ':field_asset_fid'         => $row->fid,
+      ':field_asset_display'     => 1,
+      ':field_asset_description' => '',
+    );
+
+    $keys = str_replace(':', '', implode(', ', array_keys($data)));
+    $placeholders = implode(', ', array_keys($data));
+
+    db_query("INSERT INTO {field_data_field_asset} ($keys) VALUES ($placeholders)", $data);
+    db_query("INSERT INTO {field_revision_field_asset} ($keys) VALUES ($placeholders)", $data);
+  }
+
+  $ret[] = array('success' => TRUE, 'query' => "Migrating field_collection data into field_asset.");
+
+  return $ret;
+}
