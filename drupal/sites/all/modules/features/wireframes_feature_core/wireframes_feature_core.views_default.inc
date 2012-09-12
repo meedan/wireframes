@@ -29,6 +29,9 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = 1;
+  $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = 1;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -240,6 +243,16 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Current status (field_current_status) */
+  $handler->display->display_options['filters']['field_current_status_value']['id'] = 'field_current_status_value';
+  $handler->display->display_options['filters']['field_current_status_value']['table'] = 'field_data_field_current_status';
+  $handler->display->display_options['filters']['field_current_status_value']['field'] = 'field_current_status_value';
+  $handler->display->display_options['filters']['field_current_status_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_current_status_value']['expose']['operator_id'] = 'field_current_status_value_op';
+  $handler->display->display_options['filters']['field_current_status_value']['expose']['label'] = 'Status';
+  $handler->display->display_options['filters']['field_current_status_value']['expose']['operator'] = 'field_current_status_value_op';
+  $handler->display->display_options['filters']['field_current_status_value']['expose']['identifier'] = 'field_current_status_value';
+  $handler->display->display_options['filters']['field_current_status_value']['expose']['reduce'] = 0;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
