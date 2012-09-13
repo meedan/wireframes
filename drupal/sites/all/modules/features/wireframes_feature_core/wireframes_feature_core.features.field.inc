@@ -247,79 +247,6 @@ function wireframes_feature_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-wireframe-field_asset'.
-  $fields['node-wireframe-field_asset'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_asset',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'wireframe',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 4,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_asset',
-      'label' => 'Asset',
-      'required' => 1,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => 'assets',
-        'file_extensions' => 'png gif jpg jpeg psd pdf bmml graffle vsd',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'file',
-        'settings' => array(
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'file_generic',
-        'weight' => '3',
-      ),
-    ),
-  );
-
   // Exported field: 'node-wireframe-field_asset_collection'.
   $fields['node-wireframe-field_asset_collection'] = array(
     'field_config' => array(
@@ -333,6 +260,7 @@ function wireframes_feature_core_field_default_fields() {
       'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
+        'hide_blank_items' => TRUE,
         'path' => '',
       ),
       'translatable' => '0',
@@ -519,7 +447,6 @@ function wireframes_feature_core_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Asset');
   t('Asset collection');
   t('Asset original');
   t('Asset snapshot');
