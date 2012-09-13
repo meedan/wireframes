@@ -27,6 +27,7 @@ dependencies[] = tac_lite
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = views_field_view
+dependencies[] = wireframes_updater
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
