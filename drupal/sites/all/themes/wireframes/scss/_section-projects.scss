@@ -13,28 +13,60 @@
 
 // The list of pages inside each project
 .view-pages {
+  .vbo-views-form {
+    form {
+      & > div > fieldset,
+      .vbo-select-all-markup {
+        padding: 1em;
+        margin: 0 1em 1em 0;
+
+        width: 510px;
+        float: left;
+      }
+
+      .vbo-select-all-markup {
+        padding: 0;
+      }
+    }
+  }
+
   & > .view-content {
-    & > .views-row {
+    .views-row {
       background: $page_group_color;
       padding: 1em;
       margin: 0 1em 1em 0;
 
-      width: 517px;
+      width: 510px;
       float: left;
-    }
 
-    & > .current-status-in-progress {
-      background: lighten($meedan_yellow, 30%);
-    }
-    & > .current-status-needs-review {
-      background: lighten($meedan_orange, 35%);
-    }
-    & > .current-status-done {
-      background: lighten($meedan_green, 40%);
-    }
+      & > .current-status-in-progress {
+        background: lighten($meedan_yellow, 30%);
+      }
+      & > .current-status-needs-review {
+        background: lighten($meedan_orange, 35%);
+      }
+      & > .current-status-done {
+        background: lighten($meedan_green, 40%);
+      }
 
-    & > .views-row-even {
-      margin-right: 0;
+      &.views-row-even {
+        margin-right: 0;
+      }
+      &.views-row-odd {
+        clear: both;
+      }
+    }
+  }
+
+  .views-field-title {
+    h3 {
+      display: inline-block;
+    }
+  }
+
+  .views-field-views-bulk-operations {
+    .form-item {
+      display: inline-block;
     }
   }
 

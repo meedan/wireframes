@@ -14,8 +14,6 @@ Drupal.behaviors.wireframesAssets = {
           width  = $this.outerWidth(true),
           height = $this.outerHeight(true);
 
-      console.log(height);
-
       highestItem = height > highestItem ? height : highestItem;
       fullWidth  += width;
     });
@@ -23,8 +21,6 @@ Drupal.behaviors.wireframesAssets = {
     // Add extra height to account for box padding, also a little extra to
     // ensure all browsers are happy
     highestItem += padding + 15;
-
-    console.log(highestItem);
 
     $assets.css({ height: highestItem });
     $fieldItems.css({ width: fullWidth });
@@ -35,7 +31,7 @@ Drupal.behaviors.wireframesAssets = {
 Drupal.behaviors.wireframesProjects = {
   attach: function (context) {
     // Utilize the jQuery Equal Heights plugin
-    $('.view-pages > .view-content > .views-row').equalHeightsPerRow();
+    $('.view-pages > .view-content .views-row').equalHeightsPerRow();
   }
 };
 

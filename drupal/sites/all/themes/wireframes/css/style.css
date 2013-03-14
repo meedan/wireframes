@@ -325,29 +325,54 @@ h1 {
   clear: both;
   overflow: hidden;
 }
-.page-projects .view-pages > .view-content > .views-row,
-.page-taxonomy .view-pages > .view-content > .views-row {
+.page-projects .view-pages .vbo-views-form form > div > fieldset,
+.page-projects .view-pages .vbo-views-form form .vbo-select-all-markup,
+.page-taxonomy .view-pages .vbo-views-form form > div > fieldset,
+.page-taxonomy .view-pages .vbo-views-form form .vbo-select-all-markup {
+  padding: 1em;
+  margin: 0 1em 1em 0;
+  width: 510px;
+  float: left;
+}
+.page-projects .view-pages .vbo-views-form form .vbo-select-all-markup,
+.page-taxonomy .view-pages .vbo-views-form form .vbo-select-all-markup {
+  padding: 0;
+}
+.page-projects .view-pages > .view-content .views-row,
+.page-taxonomy .view-pages > .view-content .views-row {
   background: #e6e6e6;
   padding: 1em;
   margin: 0 1em 1em 0;
-  width: 517px;
+  width: 510px;
   float: left;
 }
-.page-projects .view-pages > .view-content > .current-status-in-progress,
-.page-taxonomy .view-pages > .view-content > .current-status-in-progress {
+.page-projects .view-pages > .view-content .views-row > .current-status-in-progress,
+.page-taxonomy .view-pages > .view-content .views-row > .current-status-in-progress {
   background: #feeaa0;
 }
-.page-projects .view-pages > .view-content > .current-status-needs-review,
-.page-taxonomy .view-pages > .view-content > .current-status-needs-review {
+.page-projects .view-pages > .view-content .views-row > .current-status-needs-review,
+.page-taxonomy .view-pages > .view-content .views-row > .current-status-needs-review {
   background: #facbbd;
 }
-.page-projects .view-pages > .view-content > .current-status-done,
-.page-taxonomy .view-pages > .view-content > .current-status-done {
+.page-projects .view-pages > .view-content .views-row > .current-status-done,
+.page-taxonomy .view-pages > .view-content .views-row > .current-status-done {
   background: #d6f0b3;
 }
-.page-projects .view-pages > .view-content > .views-row-even,
-.page-taxonomy .view-pages > .view-content > .views-row-even {
+.page-projects .view-pages > .view-content .views-row.views-row-even,
+.page-taxonomy .view-pages > .view-content .views-row.views-row-even {
   margin-right: 0;
+}
+.page-projects .view-pages > .view-content .views-row.views-row-odd,
+.page-taxonomy .view-pages > .view-content .views-row.views-row-odd {
+  clear: both;
+}
+.page-projects .view-pages .views-field-title h3,
+.page-taxonomy .view-pages .views-field-title h3 {
+  display: inline-block;
+}
+.page-projects .view-pages .views-field-views-bulk-operations .form-item,
+.page-taxonomy .view-pages .views-field-views-bulk-operations .form-item {
+  display: inline-block;
 }
 .page-projects .view-pages .views-field-name,
 .page-taxonomy .view-pages .views-field-name {
