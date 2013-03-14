@@ -39,13 +39,13 @@
       width: 510px;
       float: left;
 
-      & > .current-status-in-progress {
+      &.current-status-in-progress {
         background: lighten($meedan_yellow, 30%);
       }
-      & > .current-status-needs-review {
+      &.current-status-needs-review {
         background: lighten($meedan_orange, 35%);
       }
-      & > .current-status-done {
+      &.current-status-done {
         background: lighten($meedan_green, 40%);
       }
 

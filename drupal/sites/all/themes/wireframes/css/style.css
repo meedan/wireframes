@@ -346,16 +346,16 @@ h1 {
   width: 510px;
   float: left;
 }
-.page-projects .view-pages > .view-content .views-row > .current-status-in-progress,
-.page-taxonomy .view-pages > .view-content .views-row > .current-status-in-progress {
+.page-projects .view-pages > .view-content .views-row.current-status-in-progress,
+.page-taxonomy .view-pages > .view-content .views-row.current-status-in-progress {
   background: #feeaa0;
 }
-.page-projects .view-pages > .view-content .views-row > .current-status-needs-review,
-.page-taxonomy .view-pages > .view-content .views-row > .current-status-needs-review {
+.page-projects .view-pages > .view-content .views-row.current-status-needs-review,
+.page-taxonomy .view-pages > .view-content .views-row.current-status-needs-review {
   background: #facbbd;
 }
-.page-projects .view-pages > .view-content .views-row > .current-status-done,
-.page-taxonomy .view-pages > .view-content .views-row > .current-status-done {
+.page-projects .view-pages > .view-content .views-row.current-status-done,
+.page-taxonomy .view-pages > .view-content .views-row.current-status-done {
   background: #d6f0b3;
 }
 .page-projects .view-pages > .view-content .views-row.views-row-even,
