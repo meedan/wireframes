@@ -236,6 +236,10 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['field'] = 'term_node_tid_depth_modifier';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -247,12 +251,28 @@ function wireframes_feature_core_views_default_views() {
   $handler->display->display_options['filters']['field_current_status_value']['id'] = 'field_current_status_value';
   $handler->display->display_options['filters']['field_current_status_value']['table'] = 'field_data_field_current_status';
   $handler->display->display_options['filters']['field_current_status_value']['field'] = 'field_current_status_value';
+  $handler->display->display_options['filters']['field_current_status_value']['group'] = 1;
   $handler->display->display_options['filters']['field_current_status_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_current_status_value']['expose']['operator_id'] = 'field_current_status_value_op';
   $handler->display->display_options['filters']['field_current_status_value']['expose']['label'] = 'Status';
   $handler->display->display_options['filters']['field_current_status_value']['expose']['operator'] = 'field_current_status_value_op';
   $handler->display->display_options['filters']['field_current_status_value']['expose']['identifier'] = 'field_current_status_value';
   $handler->display->display_options['filters']['field_current_status_value']['expose']['reduce'] = 0;
+  /* Filter criterion: Field: Archived (field_archived) */
+  $handler->display->display_options['filters']['field_archived_value']['id'] = 'field_archived_value';
+  $handler->display->display_options['filters']['field_archived_value']['table'] = 'field_data_field_archived';
+  $handler->display->display_options['filters']['field_archived_value']['field'] = 'field_archived_value';
+  $handler->display->display_options['filters']['field_archived_value']['operator'] = 'not in';
+  $handler->display->display_options['filters']['field_archived_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_archived_value']['group'] = 2;
+  /* Filter criterion: Field: Archived (field_archived) */
+  $handler->display->display_options['filters']['field_archived_value_1']['id'] = 'field_archived_value_1';
+  $handler->display->display_options['filters']['field_archived_value_1']['table'] = 'field_data_field_archived';
+  $handler->display->display_options['filters']['field_archived_value_1']['field'] = 'field_archived_value';
+  $handler->display->display_options['filters']['field_archived_value_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_archived_value_1']['group'] = 2;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
