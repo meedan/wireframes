@@ -35,7 +35,6 @@ features[field][] = field_collection_item-field_asset_collection-field_archived
 features[field][] = field_collection_item-field_asset_collection-field_asset_original
 features[field][] = field_collection_item-field_asset_collection-field_asset_snapshot
 features[field][] = node-wireframe-body
-features[field][] = node-wireframe-field_archived
 features[field][] = node-wireframe-field_asset_collection
 features[field][] = node-wireframe-field_current_status
 features[field][] = node-wireframe-field_project
