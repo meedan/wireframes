@@ -13,7 +13,7 @@ databases
 *.komodoproject
 *.proj
 *.tmp
-.DS_Store?
+.DS_Store
 Icon?
 Thumbs.db
 .bundle
