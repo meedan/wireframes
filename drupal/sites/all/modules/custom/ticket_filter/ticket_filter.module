@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * Implements hook_filter_info()
+ */
+function ticket_filter_filter_info() {
+  $filters = array();
+  $filters['ticket_filter'] = array(
+    'title' => t('Ticket filter'),
+    'description' => t('Enables users easily link to project issue numbers.'),
+    'process callback' => 'ticket_filter_filter',
+    'settings callback' => 'ticket_filter_settings',
+    'tips callback' => 'ticket_filter_tips',
+  );
+  return $filters;
+}
+
+/**
+ * Filter callback for ticket_filter.
+ */
+function ticket_filter_filter($text, $filter) {
+  return preg_replace('/\[#(\d+)\]/', l("#\\1", $filter->settings['url_pattern'], array('attributes' => array('rel' => 'nofollow', 'target' => '_blank'))), $text);
+}
+
+/**
+ * Filter settings callback for ticket_filter.
+ */
+function ticket_filter_settings($form, &$form_state, $filter, $format, $defaults) {
+  $filter->settings += $defaults;
+
+  $settings['url_pattern'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Ticket URL pattern'),
+    '#maxlength' => 1024,
+    '#default_value' => $filter->settings['url_pattern'],
+    '#description' => t('Enter the URL pattern for your bug tracking system. The placeholder <code><strong>\1</strong></code> will be replaced with the issue number. Example: <code>http://mantis.example.com/view.php?id=<strong>\1</strong></code>.'),
+    '#required' => TRUE,
+  );
+
+  return $settings;
+}
+
+/**
+ * Filter tips callback for ticket_filter.
+ */
+function ticket_filter_tips($filter, $format, $long = FALSE) {
+  return '<p>' . t("Project issue numbers (ex. [#12345]) turn into links automatically.") . '</p>';
+}

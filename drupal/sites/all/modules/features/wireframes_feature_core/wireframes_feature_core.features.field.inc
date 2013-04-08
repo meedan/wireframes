@@ -153,7 +153,7 @@ function wireframes_feature_core_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
