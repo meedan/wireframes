@@ -30,6 +30,13 @@ function wireframes_feature_core_filter_default_formats() {
         'status' => '1',
         'settings' => array(),
       ),
+      'ticket_filter' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(
+          'url_pattern' => 'http://mantis.meedan.net/view.php?id=\\1',
+        ),
+      ),
       'filter_htmlcorrector' => array(
         'weight' => '10',
         'status' => '1',
