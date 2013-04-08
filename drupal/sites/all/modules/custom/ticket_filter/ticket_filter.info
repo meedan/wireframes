@@ -1,0 +1,4 @@
+name = Ticket Filter
+description = Drupal filter for referencing ticket numbers in issue trackers.
+core = 7.x
+version = 7.x-1.0
