@@ -22,7 +22,7 @@ function revision_comment_marker_preprocess_comment_wrapper(&$variables) {
   $node     = $variables['node'];
   $comments = &$variables['content']['comments'];
 
-  $result = db_query("SELECT vid, timestamp
+  $result = db_query("SELECT vid, timestamp, uid
                         FROM {node_revision}
                        WHERE nid = :nid
                     ORDER BY vid ASC", array(':nid' => $node->nid));
@@ -71,12 +71,14 @@ function revision_comment_marker_inject_marker(&$comment, $node, $revision) {
 function theme_revision_comment_marker(&$variables) {
   $node     = $variables['node'];
   $revision = $variables['revision'];
+  $author   = user_load($revision->uid);
 
   return '<div id="revision-comment-marker-' . $revision->version . '" class="revision-comment-marker">' .
            l(
              '<span class="version-label">' . t('Version') . '</span> ' .
              '<span class="version-number">' . $revision->version . '</span> ' .
-             '<span class="version-date"> &mdash; ' . format_date($revision->timestamp) . '</span> ',
+             '<span class="version-date"> &mdash; ' . format_date($revision->timestamp) . '</span> ' . 
+             '<span class="version-author"> &mdash; ' . $author->name . '</span>',
              "node/$node->nid/revisions/$revision->vid/view",
              array('html' => TRUE)
             ) .
